@@ -1,0 +1,29 @@
+{
+    "deps/js/components/src/plugin-icon/index.js": [
+        "build/settings-page/index.js"
+    ],
+    "deps/js/components/src/promoted-plugins-panel/index.js": [
+        "build/settings-page/index.js"
+    ],
+    "deps/js/components/src/settings-container/index.js": [
+        "build/settings-page/index.js"
+    ],
+    "deps/js/components/src/settings-sidebar/index.js": [
+        "build/settings-page/index.js"
+    ],
+    "deps/js/components/src/user-role-selector/index.js": [
+        "build/settings-page/index.js"
+    ],
+    "deps/js/utils/src/render.js": [
+        "build/settings-page/index.js"
+    ],
+    "src/modules/settings-page/component-settings-form.js": [
+        "build/settings-page/index.js"
+    ],
+    "src/modules/settings-page/component-user-selector.js": [
+        "build/settings-page/index.js"
+    ],
+    "src/modules/settings-page/index.js": [
+        "build/settings-page/index.js"
+    ]
+}

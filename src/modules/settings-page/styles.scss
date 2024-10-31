@@ -1,0 +1,67 @@
+@import "../../../deps/js/components/src/variables.scss";
+
+/**
+ * Custom elements
+ */
+.password-reset-enforcement-settings-container {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	max-width: 966px;
+	padding: 16px;
+	margin: 0 auto;
+
+	@media (min-width: 769px) {
+		flex-direction: row;
+	}
+
+	/**
+	 * Action logs
+	 */
+	&__action-logs {
+		background-color: #fff;
+		border: 1px solid $border-color;
+		padding: 16px;
+		margin: 16px 0;
+
+		h2 {
+			margin: 0;
+			font-size: 13px;
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	/**
+	 * Progress bar
+	 */
+	&__progress-bar {
+		background-color: $border-color;
+		border-radius: 2px;
+		overflow: hidden;
+		margin-top: 8px;
+	}
+
+	&__progress-bar-value {
+		height: 6px;
+		background-color: var(--wp-admin-theme-color);
+	}
+
+	/**
+	 * Bottom actions
+	 */
+	&__bottom-actions {
+		margin-top: 16px;
+	}
+
+	/**
+	 * Adjustments - needs review from time to time
+	 */
+	.components-notice.is-error {
+		margin: 5px 0 0;
+	}
+
+	.components-disabled {
+		opacity: .5;
+	}
+}

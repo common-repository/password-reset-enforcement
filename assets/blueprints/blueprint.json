@@ -1,0 +1,55 @@
+{
+    "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+    "landingPage": "/wp-admin/options-general.php?page=password-reset-enforcement-settings-page",
+    "preferredVersions": {
+        "php": "8.3",
+        "wp": "6.6"
+    },
+    "phpExtensionBundles": [
+        "kitchen-sink"
+    ],
+    "features": {
+        "networking": true
+    },
+    "steps": [
+        {
+            "step": "login",
+            "username": "admin",
+            "password": "password"
+        },
+        {
+            "step": "installPlugin",
+            "pluginZipFile": {
+                "resource": "wordpress.org/plugins",
+                "slug": "password-reset-enforcement"
+            },
+            "options": {
+                "activate": true
+            }
+        },
+        {
+            "step": "wp-cli",
+            "command": "wp user create test-user-1 test-user-1@example.com --role=subscriber --user_pass=password --display_name=\"Test User 1\" --send-email=false"
+        },
+        {
+            "step": "wp-cli",
+            "command": "wp user create test-user-2 test-user-2@example.com --role=subscriber --user_pass=password --display_name=\"Test User 2\" --send-email=false"
+        },
+        {
+            "step": "wp-cli",
+            "command": "wp user create test-user-3 test-user-3@example.com --role=editor --user_pass=password --display_name=\"Test User 3\" --send-email=false"
+        },
+        {
+            "step": "wp-cli",
+            "command": "wp user create test-user-4 test-user-4@example.com --role=editor --user_pass=password --display_name=\"Test User 4\" --send-email=false"
+        },
+        {
+            "step": "wp-cli",
+            "command": "wp user create test-user-5 test-user-5@example.com --role=editor --user_pass=password --display_name=\"Test User 5\" --send-email=false"
+        },
+        {
+            "step": "wp-cli",
+            "command": "wp user create test-user-6 test-user-6@example.com --role=author --user_pass=password --display_name=\"Test User 6\" --send-email=false"
+        }
+    ]
+}
